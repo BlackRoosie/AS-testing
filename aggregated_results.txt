@@ -1,0 +1,832 @@
+#############################################
+Start of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/cdk_report_result.txt
+#############################################
+
+#############################################
+End of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/cdk_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/git_report_result.txt
+#############################################
+fatal: detected dubious ownership in repository at '/app'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /app
+#############################################
+End of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/git_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/grype_report_result.txt
+#############################################
+No vulnerabilities found
+NAME               VERSION  TYPE   
+Jinja2             3.0.3    python  
+MarkupSafe         2.1.1    python  
+attrs              21.4.0   python  
+aws-cdk-lib        2.15.0   python  
+cattrs             1.10.0   python  
+cdk-nag            2.10.5   python  
+constructs         10.0.88  python  
+jsii               1.55.0   python  
+pip                21.1.1   python  
+publication        0.0.3    python  
+pytest             6.2.5    python  
+python-dateutil    2.8.2    python  
+setuptools         56.0.0   python  
+six                1.16.0   python  
+typing_extensions  4.1.1    python  
+#############################################
+End of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/grype_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/py_report_result.txt
+#############################################
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.11.0
+871 [0.. 50.. 100.. 150.. 200.. 250.. 300.. 350.. 400.. 450.. 500.. 550.. 600.. 650.. 700.. 750.. 800.. 850.. ]
+Run started:2022-11-27 20:43:31.995919
+
+Test results:
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/attr/_make.py:325:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+324	    bytecode = compile(script, filename, "exec")
+325	    eval(bytecode, globs, locs)
+326	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/cattr/gen.py:180:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+179	
+180	        eval(compile(script, fname, "exec"), globs)
+181	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/cattr/gen.py:324:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+323	    script = "\n".join(total_lines)
+324	    eval(compile(script, fname, "exec"), globs)
+325	    if _cattrs_use_linecache:
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/cattr/gen.py:353:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+352	
+353	    eval(compile("\n".join(total_lines), "", "exec"), globs)
+354	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/cattr/gen.py:395:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+394	
+395	    eval(compile("\n".join(total_lines), "", "exec"), globs)
+396	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/cattr/gen.py:446:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+445	
+446	    eval(compile("\n".join(total_lines), "", "exec"), globs)
+447	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/cattr/gen.py:521:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+520	
+521	    eval(compile("\n".join(total_lines), "", "exec"), globs)
+522	
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/bccache.py:71:19
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b301-pickle
+70	        # the source code of the file changed, we need to reload
+71	        checksum = pickle.load(f)
+72	        if self.checksum != checksum:
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/bccache.py:77:24
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b302-marshal
+76	        try:
+77	            self.code = marshal.load(f)
+78	        except (EOFError, ValueError, TypeError):
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/bccache.py:154:15
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+153	        """Returns the unique hash key for this template name."""
+154	        hash = sha1(name.encode("utf-8"))
+155	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/bccache.py:163:15
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+162	        """Returns a checksum for the source."""
+163	        return sha1(source.encode("utf-8")).hexdigest()
+164	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/debug.py:145:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+144	    try:
+145	        exec(code, globals, locals)
+146	    except BaseException:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/environment.py:1209:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+1208	        namespace = {"environment": environment, "__file__": code.co_filename}
+1209	        exec(code, namespace)
+1210	        rv = cls._from_namespace(environment, namespace, globals)
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jinja2/loaders.py:620:25
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+619	    def get_template_key(name: str) -> str:
+620	        return "tmpl_" + sha1(name.encode("utf-8")).hexdigest()
+621	
+
+--------------------------------------------------
+>> Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.
+   Severity: Medium   Confidence: Low
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_internal/commands/completion.py:87:18
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b604_any_other_function_with_shell_equals_true.html
+86	            )
+87	            print(BASE_COMPLETION.format(script=script, shell=options.shell))
+88	            return SUCCESS
+
+--------------------------------------------------
+>> Issue: [B411:blacklist] Using xmlrpclib to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.
+   Severity: High   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/distlib/compat.py:43:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_imports.html#b411-import-xmlrpclib
+42	    import httplib
+43	    import xmlrpclib
+44	    import Queue as queue
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/distlib/database.py:1017:19
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+1016	                f.close()
+1017	            return hashlib.md5(content).hexdigest()
+1018	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/distlib/index.py:276:21
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+275	            file_data = f.read()
+276	        md5_digest = hashlib.md5(file_data).hexdigest()
+277	        sha256_digest = hashlib.sha256(file_data).hexdigest()
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/html5lib/_inputstream.py:32:36
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+31	    invalid_unicode_re = re.compile(invalid_unicode_no_surrogate[:-1] +
+32	                                    eval('"\\uD800-\\uDFFF"') +  # pylint:disable=eval-used
+33	                                    "]")
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/html5lib/_utils.py:33:9
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+32	try:
+33	    _x = eval('"\\uD800"')  # pylint:disable=eval-used
+34	    if not isinstance(_x, text_type):
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/html5lib/_utils.py:36:13
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b307-eval
+35	        # We need this with u"" because of http://bugs.jython.org/issue2039
+36	        _x = eval('u"\\uD800"')  # pylint:disable=eval-used
+37	        assert isinstance(_x, text_type)
+
+--------------------------------------------------
+>> Issue: [B320:blacklist] Using lxml.etree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.fromstring with its defusedxml equivalent function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py:365:15
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b313-b320-xml-bad-etree
+364	        docStr += "<THIS_SHOULD_NEVER_APPEAR_PUBLICLY/>"
+365	        root = etree.fromstring(docStr)
+366	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/pkg_resources/__init__.py:1462:12
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+1461	            code = compile(source, script_filename, 'exec')
+1462	            exec(code, namespace, namespace)
+1463	        else:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/pkg_resources/__init__.py:1469:12
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+1468	            script_code = compile(script_text, script_filename, 'exec')
+1469	            exec(script_code, namespace, namespace)
+1470	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/requests/auth.py:148:23
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+147	                    x = x.encode('utf-8')
+148	                return hashlib.md5(x).hexdigest()
+149	            hash_utf8 = md5_utf8
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/requests/auth.py:154:23
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+153	                    x = x.encode('utf-8')
+154	                return hashlib.sha1(x).hexdigest()
+155	            hash_utf8 = sha_utf8
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD4, MD5, or SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/requests/auth.py:198:18
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b324_hashlib.html
+197	
+198	        cnonce = (hashlib.sha1(s).hexdigest()[:16])
+199	        if _algorithm == 'MD5-SESS':
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/six.py:719:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+718	            _locs_ = _globs_
+719	        exec("""exec _code_ in _globs_, _locs_""")
+720	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/urllib3/packages/six.py:753:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+752	            _locs_ = _globs_
+753	        exec("""exec _code_ in _globs_, _locs_""")
+754	
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pip/_vendor/webencodings/mklabels.py:47:35
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b310-urllib-urlopen
+46	         repr(encoding['name']).lstrip('u'))
+47	        for category in json.loads(urlopen(url).read().decode('ascii'))
+48	        for encoding in category['encodings']
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pkg_resources/__init__.py:1448:12
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+1447	            code = compile(source, script_filename, 'exec')
+1448	            exec(code, namespace, namespace)
+1449	        else:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/pkg_resources/__init__.py:1455:12
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+1454	            script_code = compile(script_text, script_filename, 'exec')
+1455	            exec(script_code, namespace, namespace)
+1456	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/command/bdist_rpm.py:340:14
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b605_start_process_with_a_shell.html
+339	
+340	        out = os.popen(q_cmd)
+341	        try:
+
+--------------------------------------------------
+>> Issue: [B306:blacklist] Use of insecure and deprecated function (mktemp).
+   Severity: Medium   Confidence: High
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/command/bdist_wininst.py:185:27
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b306-mktemp-q
+184	        from tempfile import mktemp
+185	        archive_basename = mktemp()
+186	        fullname = self.distribution.get_fullname()
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/command/register.py:89:19
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b310-urllib-urlopen
+88	        url = self.repository+'?:action=list_classifiers'
+89	        response = urllib.request.urlopen(url)
+90	        log.info(self._read_pypi_response(response))
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/command/upload.py:194:21
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b310-urllib-urlopen
+193	        try:
+194	            result = urlopen(request)
+195	            status = result.getcode()
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/core.py:215:16
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+214	            with open(script_name, 'rb') as f:
+215	                exec(f.read(), g)
+216	        finally:
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/cygwinccompiler.py:380:10
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b602_subprocess_popen_with_shell_equals_true.html
+379	        return None
+380	    out = Popen(cmd, shell=True, stdout=PIPE).stdout
+381	    try:
+
+--------------------------------------------------
+>> Issue: [B306:blacklist] Use of insecure and deprecated function (mktemp).
+   Severity: Medium   Confidence: High
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/_distutils/util.py:388:45
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b306-mktemp-q
+387	            from tempfile import mktemp
+388	            (script_fd, script_name) = None, mktemp(".py")
+389	        log.info("writing byte-compilation script '%s'", script_name)
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/build_meta.py:150:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+149	
+150	        exec(compile(code, __file__, 'exec'), locals())
+151	
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/command/bdist_egg.py:376:11
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b302-marshal
+375	    f.read(skip)
+376	    code = marshal.load(f)
+377	    f.close()
+
+--------------------------------------------------
+>> Issue: [B309:blacklist] Use of HTTPSConnection on older versions of Python prior to 2.7.9 and 3.4.3 do not provide security, see https://wiki.openstack.org/wiki/OSSN/OSSN-0033
+   Severity: Medium   Confidence: High
+   CWE: CWE-319 (https://cwe.mitre.org/data/definitions/319.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/command/upload_docs.py:170:19
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b309-httpsconnection
+169	        elif schema == 'https':
+170	            conn = http.client.HTTPSConnection(netloc)
+171	        else:
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/depends.py:111:19
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b302-marshal
+110	            f.read(8)  # skip magic & date
+111	            code = marshal.load(f)
+112	        elif kind == PY_FROZEN:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/launch.py:32:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+31	    code = compile(norm_script, script_name, 'exec')
+32	    exec(code, namespace)
+33	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/package_index.py:879:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b605_start_process_with_a_shell.html
+878	        self.info("Doing subversion checkout from %s to %s", url, filename)
+879	        os.system("svn checkout%s -q %s %s" % (creds, url, filename))
+880	        return filename
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/package_index.py:905:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b605_start_process_with_a_shell.html
+904	        self.info("Doing git clone from %s to %s", url, filename)
+905	        os.system("git clone --quiet %s %s" % (url, filename))
+906	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/package_index.py:909:12
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b605_start_process_with_a_shell.html
+908	            self.info("Checking out %s", rev)
+909	            os.system("git -C %s checkout --quiet %s" % (
+910	                filename,
+911	                rev,
+912	            ))
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/package_index.py:921:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b605_start_process_with_a_shell.html
+920	        self.info("Doing hg clone from %s to %s", url, filename)
+921	        os.system("hg clone --quiet %s %s" % (url, filename))
+922	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/package_index.py:925:12
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b605_start_process_with_a_shell.html
+924	            self.info("Updating to %s", rev)
+925	            os.system("hg --cwd %s up -C -r %s -q" % (
+926	                filename,
+927	                rev,
+928	            ))
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/package_index.py:1122:15
+   More Info: https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_calls.html#b310-urllib-urlopen
+1121	    if os.path.isfile(filename):
+1122	        return urllib.request.urlopen(url)
+1123	    elif path.endswith('/') and os.path.isdir(filename):
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/setuptools/sandbox.py:43:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+42	    code = compile(script, filename, 'exec')
+43	    exec(code, globals, locals)
+44	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   Location: ./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/six.py:735:8
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b102_exec_used.html
+734	            _locs_ = _globs_
+735	        exec("""exec _code_ in _globs_, _locs_""")
+736	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1046687
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 6560
+		Medium: 36
+		High: 16
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 1
+		Medium: 27
+		High: 6584
+Files skipped (0):
+#############################################
+End of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/py_report_result.txt
+#############################################
+
+
+#############################################
+Start of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/yaml_report_result.txt
+#############################################
+
+       _               _              
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V / 
+  \___|_| |_|\___|\___|_|\_\___/ \_/  
+                                      
+By bridgecrew.io | version: 2.2.99 
+
+cloudformation scan results:
+
+Passed checks: 24, Failed checks: 3, Skipped checks: 0, Parsing errors: 1
+
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: AWS::IAM::User.MyPublishUser
+	File: /utils/cfn-to-cdk/my-template.json:49-56
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-data-exfiltration
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management without constraints"
+	PASSED for resource: AWS::IAM::User.MyPublishUser
+	File: /utils/cfn-to-cdk/my-template.json:49-56
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-permissions-management-resource-exposure-without-constraint
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: AWS::IAM::User.MyPublishUser
+	File: /utils/cfn-to-cdk/my-template.json:49-56
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-does-not-allow-privilege-escalation
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: AWS::IAM::User.MyPublishUser
+	File: /utils/cfn-to-cdk/my-template.json:49-56
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-credentials-exposure
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: AWS::IAM::User.MyPublishUser
+	File: /utils/cfn-to-cdk/my-template.json:49-56
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-write-access-without-constraint
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-data-exfiltration
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management without constraints"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-permissions-management-resource-exposure-without-constraint
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-does-not-allow-privilege-escalation
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-credentials-exposure
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-write-access-without-constraint
+Check: CKV_AWS_62: "Ensure no IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/iam_47
+Check: CKV_AWS_63: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: AWS::IAM::Group.MyPublishTopicGroup
+	File: /utils/cfn-to-cdk/my-template.json:65-79
+	Guide: https://docs.bridgecrew.io/docs/iam_48
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: AWS::IAM::User.MyQueueUser
+	File: /utils/cfn-to-cdk/my-template.json:89-96
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-data-exfiltration
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management without constraints"
+	PASSED for resource: AWS::IAM::User.MyQueueUser
+	File: /utils/cfn-to-cdk/my-template.json:89-96
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-permissions-management-resource-exposure-without-constraint
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: AWS::IAM::User.MyQueueUser
+	File: /utils/cfn-to-cdk/my-template.json:89-96
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-does-not-allow-privilege-escalation
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: AWS::IAM::User.MyQueueUser
+	File: /utils/cfn-to-cdk/my-template.json:89-96
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-credentials-exposure
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: AWS::IAM::User.MyQueueUser
+	File: /utils/cfn-to-cdk/my-template.json:89-96
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-write-access-without-constraint
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-data-exfiltration
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management without constraints"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-permissions-management-resource-exposure-without-constraint
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-does-not-allow-privilege-escalation
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-credentials-exposure
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/ensure-iam-policies-do-not-allow-write-access-without-constraint
+Check: CKV_AWS_62: "Ensure no IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/iam_47
+Check: CKV_AWS_63: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: AWS::IAM::Group.MyRDMessageQueueGroup
+	File: /utils/cfn-to-cdk/my-template.json:105-119
+	Guide: https://docs.bridgecrew.io/docs/iam_48
+Check: CKV_AWS_26: "Ensure all data stored in the SNS topic is encrypted"
+	FAILED for resource: AWS::SNS::Topic.MySNSTopic
+	File: /utils/cfn-to-cdk/my-template.json:28-39
+	Guide: https://docs.bridgecrew.io/docs/general_15
+
+		28 |       "MySNSTopic" : {
+		29 |         "Type" : "AWS::SNS::Topic",
+		30 |         "Properties" : {
+		31 |           "Subscription" : [ {
+		32 |             "Endpoint" : { "Fn::GetAtt" : ["MyQueue1", "Arn"]},
+		33 |             "Protocol" : "sqs"
+		34 |           }, {
+		35 |             "Endpoint" : { "Fn::GetAtt" : ["MyQueue2", "Arn"]},
+		36 |             "Protocol" : "sqs"
+		37 |           } ]
+		38 |         }
+		39 |       },
+
+Check: CKV_AWS_27: "Ensure all data stored in the SQS queue is encrypted"
+	FAILED for resource: AWS::SQS::Queue.MyQueue1
+	File: /utils/cfn-to-cdk/my-template.json:41-43
+	Guide: https://docs.bridgecrew.io/docs/general_16-encrypt-sqs-queue
+
+		41 |       "MyQueue1" : {
+		42 |         "Type" : "AWS::SQS::Queue"
+		43 |       },
+
+Check: CKV_AWS_27: "Ensure all data stored in the SQS queue is encrypted"
+	FAILED for resource: AWS::SQS::Queue.MyQueue2
+	File: /utils/cfn-to-cdk/my-template.json:45-47
+	Guide: https://docs.bridgecrew.io/docs/general_16-encrypt-sqs-queue
+
+		45 |       "MyQueue2" : {
+		46 |         "Type" : "AWS::SQS::Queue"
+		47 |       },
+
+Error parsing file ./utils/cfn-to-cdk/cfn_to_cdk/cfn.jsonֿ
+terraform_plan scan results:
+
+Passed checks: 0, Failed checks: 0, Skipped checks: 0, Parsing errors: 1
+
+Error parsing file cfn.jsonֿ
+
+------------------------------------------------------------
+./utils/cfn-to-cdk/cdk.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./utils/cfn-to-cdk/cfn_to_cdk/cfn.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Invalid JSON![0m
+
+Failures count: 1
+Warnings count: 0
+------------------------------------------------------------
+./utils/cfn-to-cdk/my-template.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL APPSEC-IAM-USEEPHEMERALCREDENTIALS-IAMUSER[0m
+[31m|[0m
+[31m| Resource: ["MyPublishUser", "MyQueueUser"][0m
+[31m| Line Numbers: [50, 90][0m
+[31m|[0m
+[31m| IAM Users represent long-term credentials[0m
+------------------------------------------------------------
+[33m| WARN W50[0m
+[33m|[0m
+[33m| Resource: ["MyPublishUser", "MyQueueUser"][0m
+[33m| Line Numbers: [50, 90][0m
+[33m|[0m
+[33m| IAM User Login Profile should exist and have PasswordResetRequired property set to true[0m
+------------------------------------------------------------
+[33m| WARN W47[0m
+[33m|[0m
+[33m| Resource: ["MySNSTopic"][0m
+[33m| Line Numbers: [29][0m
+[33m|[0m
+[33m| SNS Topic should specify KmsMasterKeyId property[0m
+------------------------------------------------------------
+[33m| WARN W48[0m
+[33m|[0m
+[33m| Resource: ["MyQueue1", "MyQueue2"][0m
+[33m| Line Numbers: [42, 46][0m
+[33m|[0m
+[33m| SQS Queue should specify KmsMasterKeyId property[0m
+------------------------------------------------------------
+[31m| FAIL F21[0m
+[31m|[0m
+[31m| Resource: ["MyQueuePolicy"][0m
+[31m| Line Numbers: [130][0m
+[31m|[0m
+[31m| SQS Queue policy should not allow * principal[0m
+
+Failures count: 3
+Warnings count: 5
+------------------------------------------------------------
+./utils/cfn-to-cdk/venv/lib/python3.8/site-packages/jsii/_metadata.json
+------------------------------------------------------------------------------------------------------------------------
+[31m| FAIL FATAL[0m
+[31m|[0m
+[31m| Illegal cfn - no Resources[0m
+
+Failures count: 1
+Warnings count: 0
+#############################################
+End of  /mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/automated-security-helper/yaml_report_result.txt
+#############################################
+
+
