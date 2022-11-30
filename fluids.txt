@@ -1,0 +1,52 @@
+/mnt/d/studia/II_stopien/II_sem/app_sec/mobile_apps/to_testing/Mobile-app$ m gitlab:fluidattacks/universe@trunk /skims scan ~/.makes/cache/sources/gitlab-fluidattacks-universe-trunk/integrates/secrets/lint/config.yaml
+
+                               🦄 Makes
+                             v22.11-linux
+
+──────────── Fetching gitlab:fluidattacks/universe@trunk ─────────────
+Initialized empty Git repository in /tmp/makes-x_sei5sk/.git/
+Cached from /home/daria/.makes/cache/sources/gitlab-fluidattacks-universe-trunk
+remote: Enumerating objects: 12282, done.
+remote: Counting objects: 100% (12282/12282), done.
+remote: Compressing objects: 100% (8353/8353), done.
+remote: Total 12282 (delta 2767), reused 12282 (delta 2767), pack-reused 0
+Receiving objects: 100% (12282/12282), 120.80 MiB | 62.01 MiB/s, done.Resolving deltas: 100% (2767/2767), done.
+From /home/daria/.makes/cache/sources/gitlab-fluidattacks-universe-trunk
+ * [new branch]      trunk      -> trunk
+Switched to branch 'trunk'
+
+─────────────────── Building project configuration ───────────────────
+/nix/store/04308v6x50q009wp9ai7yvxp1x2jzbfi-config.json
+
+────────────────────────── Building /skims ───────────────────────────
+/nix/store/hg3q569fr3p966d4mf91rzv99rfb5j4m-skims
+───────────────────────────── Provenance ─────────────────────────────Attestation: /home/daria/.makes/provenance-skims.json
+SHA-256: 16fbf78c306a45d19e0fe03b8ac49a068f69a92c52ccc2b60ee3a7dd8d884264
+
+────────────────────────────── Running ───────────────────────────────
+[WARNING] Function: __main__.cli_scan_wrapped, type: Key: namespace is required
+Traceback (most recent call last):
+  File "/nix/store/s1xq7qiymq9i2n7bnb9v2j27dp27577a-skims/config/__init__.py", line 141, in load
+    namespace=config.pop("namespace"),
+KeyError: 'namespace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/nix/store/s1xq7qiymq9i2n7bnb9v2j27dp27577a-skims/utils/function.py", line 220, in wrapper
+    return function(*args, **kwargs)
+  File "/nix/store/s1xq7qiymq9i2n7bnb9v2j27dp27577a-skims/cli/__init__.py", line 121, in cli_scan_wrapped
+    success: bool = run(
+  File "/nix/store/33z2zxmvnq9k4fmbqim6ffzhlgiwmxb6-skims-runtime/lib/python3.8/site-packages/aioextensions/__init__.py", line 292, in run
+    return asyncio.run(coroutine, debug=debug)
+  File "/nix/store/mbsng5p51yxdpkf53v91i6ck8fdg4w9b-python3-3.8.13/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/nix/store/mbsng5p51yxdpkf53v91i6ck8fdg4w9b-python3-3.8.13/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/nix/store/s1xq7qiymq9i2n7bnb9v2j27dp27577a-skims/core/scan.py", line 233, in main
+    load(group, config)  # NOSONAR
+  File "/nix/store/s1xq7qiymq9i2n7bnb9v2j27dp27577a-skims/config/__init__.py", line 161, in load
+    raise confuse.ConfigError(f"Key: {exc.args[0]} is required")
+confuse.exceptions.ConfigError: Key: namespace is required
+
+[INFO] Success: False
