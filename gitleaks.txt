@@ -1,0 +1,22 @@
+[
+ {
+  "Description": "GCP API key",
+  "StartLine": 8,
+  "EndLine": 8,
+  "StartColumn": 13,
+  "EndColumn": 52,
+  "Match": "AIzaSyDYv2rImK5U03cqhRN1FnBO4FkSWee2KqM\"",
+  "Secret": "AIzaSyDYv2rImK5U03cqhRN1FnBO4FkSWee2KqM",
+  "File": "firebase.js",
+  "SymlinkFile": "",
+  "Commit": "302f802617d70fc8fea7e6f01d84dd5e48f9a80d",
+  "Entropy": 4.926428,
+  "Author": "Patryk Miedziaszczyk",
+  "Email": "p.miedziaszczyk@macopedia.com",
+  "Date": "2022-11-27T13:25:51Z",
+  "Message": "init",
+  "Tags": [],
+  "RuleID": "gcp-api-key",
+  "Fingerprint": "302f802617d70fc8fea7e6f01d84dd5e48f9a80d:firebase.js:gcp-api-key:8"
+ }
+]

@@ -1,0 +1,263 @@
+==================================================================================
+
+HORUSEC ENDED THE ANALYSIS WITH STATUS OF "success" AND WITH THE FOLLOWING RESULTS:
+
+==================================================================================
+
+Analysis StartedAt: 2022-11-27 22:22:43
+Analysis FinishedAt: 2022-11-27 22:23:39
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 8
+Column: 11
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/firebase.js
+Code: apiKey: "AIzaSyDYv2rImK5U03cqhRN1FnBO4FkSWee2KqM",
+RuleID: HS-LEAKS-13
+Type: Vulnerability
+ReferenceHash: 049c0deb4be23afd26f966a69b398628425c8e011cc5600b21c72a750a3d268d
+Details: (1/2) * Possible vulnerability detected: Google API key
+When use Google API key is recommended use vault or environment variable encrypted for the best security. For more information checkout the CWE-312 (https://cwe.mitre.org/data/definitions/312.html) advisory.
+         
+(2/2) * Possible vulnerability detected: Potential Hard-coded credential
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 1883
+Column: 13
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code: "minipass": "3.1.6",
+RuleID: HS-LEAKS-26
+Type: Vulnerability
+ReferenceHash: f43145c2f2cd95130698968be981f6dadb166ee4405cd149c21932c119daa74a
+Details: (1/1) * Possible vulnerability detected: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 15030
+Column: 13
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code: "minipass": "3.1.6",
+RuleID: HS-LEAKS-26
+Type: Vulnerability
+ReferenceHash: e8d9b525172317c0045b1f07767e718a762e7b1bbc02f4d487f2e0231e201b5c
+Details: (1/1) * Possible vulnerability detected: Hard-coded password
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 29
+Column: 22
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/screens/LoginScreen.js
+Code: .catch(error => alert(error.message))
+RuleID: HS-JAVASCRIPT-16
+Type: Vulnerability
+ReferenceHash: 847ae9b4d81064021062524ea50d496fef6175cf855530de72e810a128730852
+Details: (1/1) * Possible vulnerability detected: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 39
+Column: 22
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/screens/LoginScreen.js
+Code: .catch(error => alert(error.message))
+RuleID: HS-JAVASCRIPT-16
+Type: Vulnerability
+ReferenceHash: 62b7e810ff8faf3682175de958a1291076f280154a1eed271cdb5d8838710146
+Details: (1/1) * Possible vulnerability detected: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 35
+Column: 22
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/screens/ShopScreen.js
+Code: .catch(error => alert(error.message))
+RuleID: HS-JAVASCRIPT-16
+Type: Vulnerability
+ReferenceHash: ab7b3bedad343be2bf87c01bd40a32841099306e32f6f45d589e6368d51f5dc5
+Details: (1/1) * Possible vulnerability detected: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 15
+Column: 22
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/screens/CartScreen.js
+Code: .catch(error => alert(error.message))
+RuleID: HS-JAVASCRIPT-16
+Type: Vulnerability
+ReferenceHash: 941c667c3038046e55a76ab5dd201e597a0c3a498199f91560460b7706c1d169
+Details: (1/1) * Possible vulnerability detected: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 15
+Column: 22
+SecurityTool: HorusecEngine
+Confidence: HIGH
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/screens/HomeScreen.js
+Code: .catch(error => alert(error.message))
+RuleID: HS-JAVASCRIPT-16
+Type: Vulnerability
+ReferenceHash: daa916d777438bc7e42b027ad569e09852a2a27b1071a413c14ba736ada33d18
+Details: (1/1) * Possible vulnerability detected: Alert statements should not be used
+alert(...) as well as confirm(...) and prompt(...) can be useful for debugging during development, but in production mode this kind of pop-up could expose sensitive information to attackers, and should never be displayed. For more information checkout the CWE-489 (https://cwe.mitre.org/data/definitions/489.html) advisory.
+
+==================================================================================
+
+Language: JavaScript
+Severity: HIGH
+Line: 19902
+Column: 
+SecurityTool: NpmAudit
+Confidence: LOW
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code: node-fetch
+RuleID: 1084495
+Type: Vulnerability
+ReferenceHash: 81c30d9ceea5ac8b24a62593822f1adfbff4c046c8f55eeba095c50cbebdc548
+Details: (1/2) * Possible vulnerability detected: node-fetch is vulnerable to Exposure of Sensitive Information to an Unauthorized Actor
+         
+(2/2) * Possible vulnerability detected: ### Impact
+Node Fetch did not honor the `size` option after following a redirect, which means that when a content size was over the limit, a `FetchError` would never get thrown and the process would end without failure.
+
+For most people, this fix will have a little or no impact. However, if you are relying on node-fetch to gate files above a size, the impact could be significant, for example: If you don't double-check the size of the data after `fetch()` has completed, your JS thread could get tied up doing work on a large file (DoS) and/or cost you money in computing.
+
+### Patches
+We released patched versions for both stable and beta channels:
+
+- For `v2`: 2.6.1
+- For `v3`: 3.0.0-beta.9
+
+### Workarounds
+None, it is strongly recommended to update as soon as possible.
+
+### For more information
+If you have any questions or comments about this advisory:
+* Open an issue in [node-fetch](https://github.com/node-fetch/node-fetch/issues/new?assignees=&labels=question&template=support-or-usage.md&title=Question%3A+)
+* Contact one of the core maintainers.
+
+==================================================================================
+
+Language: Generic
+Severity: HIGH
+Line: 8204
+Column: 0
+SecurityTool: Trivy
+Confidence: MEDIUM
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code:       "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz",
+	Installed Version: "1.7.3"
+	Update to Version: "2.6.7, 3.1.1" for fix this issue.
+RuleID: CVE-2022-0235
+Type: Vulnerability
+ReferenceHash: 47be04436eb7bac39ba65c69623953139670687de94adc61254446a4311815b4
+Details: (1/1) * Possible vulnerability detected: node-fetch is vulnerable to Exposure of Sensitive Information to an Unauthorized Actor
+PrimaryURL: https://avd.aquasec.com/nvd/cve-2022-0235.
+Cwe Links: (https://cwe.mitre.org/data/definitions/200.html)
+
+==================================================================================
+
+Language: JavaScript
+Severity: MEDIUM
+Line: 16035
+Column: 
+SecurityTool: NpmAudit
+Confidence: LOW
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code: @firebase/util
+RuleID: 1082149
+Type: Vulnerability
+ReferenceHash: 84806112c5ea757f57ad9af427d2271997f8632723c18eb3b538a256c113bdde
+Details: (1/1) * Possible vulnerability detected: This affects the package @firebase/util before 0.3.4. This vulnerability relates to the deepExtend function within the DeepCopy.ts file. Depending on if user input is provided, an attacker can overwrite and pollute the object prototype of a program.
+
+==================================================================================
+
+Language: Generic
+Severity: MEDIUM
+Line: 2934
+Column: 0
+SecurityTool: Trivy
+Confidence: MEDIUM
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code:         "@firebase/util": "0.1.10",
+	Installed Version: "0.1.10"
+	Update to Version: "0.3.4" for fix this issue.
+RuleID: CVE-2020-7765
+Type: Vulnerability
+ReferenceHash: 4d82c4addd9ad4219fb3ad1b05c645f02dc50fc0f66ec20720ae1e8f23e659c7
+Details: (1/1) * Possible vulnerability detected: This affects the package @firebase/util before 0.3.4. This vulnerability relates to the deepExtend function within the DeepCopy.ts file. Depending on if user input is provided, an attacker can overwrite and pollute the object prototype of a program.
+PrimaryURL: https://avd.aquasec.com/nvd/cve-2020-7765.
+
+==================================================================================
+
+Language: Generic
+Severity: LOW
+Line: 8204
+Column: 0
+SecurityTool: Trivy
+Confidence: MEDIUM
+File: /home/daniel/Desktop/MobileApplicationSecurity/src/.horusec/34c5024a-d48d-4e5a-9c7e-acee7d1d70bb/package-lock.json
+Code:       "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz",
+	Installed Version: "1.7.3"
+	Update to Version: "3.0.0-beta.9, 2.6.1" for fix this issue.
+RuleID: CVE-2020-15168
+Type: Vulnerability
+ReferenceHash: 92e17d9207b1ba40e21fb101bc57a52cbd53545c8cece69931e005c38e869501
+Details: (1/1) * Possible vulnerability detected: node-fetch before versions 2.6.1 and 3.0.0-beta.9 did not honor the size option after following a redirect, which means that when a content size was over the limit, a FetchError would never get thrown and the process would end without failure. For most people, this fix will have a little or no impact. However, if you are relying on node-fetch to gate files above a size, the impact could be significant, for example: If you don't double-check the size of the data after fetch() has completed, your JS thread could get tied up doing work on a large file (DoS) and/or cost you money in computing.
+PrimaryURL: https://avd.aquasec.com/nvd/cve-2020-15168.
+Cwe Links: (https://cwe.mitre.org/data/definitions/770.html)
+
+==================================================================================
+
+In this analysis, a total of 13 possible vulnerabilities were found and we classified them into:
+Total of Vulnerability MEDIUM is: 2
+Total of Vulnerability LOW is: 1
+Total of Vulnerability CRITICAL is: 3
+Total of Vulnerability HIGH is: 7
+
+==================================================================================
+
+
+time="2022-11-27T22:23:39Z" level=warning msg="{HORUSEC_CLI} No authorization token was found, your code it is not going to be sent to horusec. Please enter a token with the -a flag to configure and save your analysis"
+
+time="2022-11-27T22:23:39Z" level=warning msg="{HORUSEC_CLI} 13 VULNERABILITIES WERE FOUND IN YOUR CODE SENT TO HORUSEC, TO SEE MORE DETAILS USE THE LOG LEVEL AS DEBUG AND TRY AGAIN"
+
+time="2022-11-27T22:23:39Z" level=warning msg="{HORUSEC_CLI} Horusec not show info vulnerabilities in this analysis, to see info vulnerabilities add option \"--information-severity=true\". For more details use (horusec start --help) command."
+time="2022-11-27T22:23:39Z" level=warning msg="{HORUSEC_CLI} Error while running tool YarnAudit: file yarn.lock file was not found in your Javascript project. If you use Yarn to handle your dependencies, it would be a good idea to commit it so Horusec can check for vulnerabilities"
+
